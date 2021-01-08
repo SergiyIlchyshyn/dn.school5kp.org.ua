@@ -1,0 +1,122 @@
+/*===== GOOGLE FONTS =====*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900|Roboto:300&display=swap&subset=cyrillic");
+
+/*===== VARIABLES CSS =====*/
+
+ :root {
+    /*===== Font and typography =====*/
+    --body-font: 'Roboto', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+    --biggest-font-size: 3.5rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    /*===== Colors =====*/
+    --text-color: #1f1f1f;
+    /*===== Font weight =====*/
+    --font-light: 300;
+    --font-black: 900;
+    /*===== Margenes =====*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+}
+
+
+/*===== BASE =====*/
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-light);
+    /* background-color: var(--first-color-lighten); */
+    color: var(--text-color);
+    line-height: 1.375;
+}
+
+
+/*===== LAYOUT =====*/
+
+
+/* container start */
+
+.container {
+    max-width: 1200px;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+}
+
+
+/* container end */
+
+
+/*===== HEADER =====*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    /* background-color: rgba(11, 20, 25, 0.9); */
+    padding: 9px 0;
+    overflow: hidden;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__start {
+    margin-right: var(--mb-3);
+}
+
+.header__end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__title {
+    margin-bottom: var(--mb-2);
+}
+
+.header__subtitle {
+    text-transform: uppercase;
+}
+
+
+/* logo start */
+
+.logo__img {
+    width: 127px;
+    /* height: 19px; */
+}
+
+
+/* logo end */
+
+
+/*===== END HEADER =====*/
