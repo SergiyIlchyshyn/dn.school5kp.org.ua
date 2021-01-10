@@ -23,6 +23,7 @@ font-family: 'Montserrat', sans-serif; */
     /*===== Colors =====*/
     --text-color: #1f1f1f;
     --red: #ff0000;
+    --bg-color: rgba(11, 20, 25, 0.9);
     /*===== Font weight =====*/
     --font-light: 300;
     --font-regular: 400;
@@ -56,7 +57,6 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--font-regular);
-    /* background-color: var(--first-color-lighten); */
     color: var(--text-color);
     line-height: 1.375;
 }
@@ -68,6 +68,10 @@ img {
 
 p {
     text-align: justify;
+}
+
+a {
+    text-decoration: none;
 }
 
 .danger {
@@ -138,6 +142,44 @@ p {
 /* section end */
 
 
+/*===== SCROLL TOP =====*/
+
+.scrollTop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: rgba(123, 111, 113, 0.7);
+    border-radius: 0.5rem;
+    z-index: 100;
+    transition: 0.4s;
+    visibility: hidden;
+}
+
+.scrollTop:hover {
+    background-color: var(--bg-color);
+}
+
+.scrollTop__icon {
+    font-size: 2rem;
+    color: #FBF9F9;
+}
+
+
+/* Show scroll top */
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+
+/*===== END SCROLL TOP =====*/
+
+
 /*===== HEADER =====*/
 
 .header {
@@ -181,21 +223,23 @@ p {
 }
 
 .header__menu {
-    background-color: rgba(11, 20, 25, 0.9);
+    background-color: var(--bg-color);
     transition: position 0.7s;
 }
 
-.header__menu.is-active {
+
+/* .header__menu.is-active {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-}
+} */
 
 .header__ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 0;
 }
 
@@ -244,7 +288,7 @@ p {
     .header__start {
         margin-right: 0;
     }
-    .logo {
+    .logo__img {
         width: 200px;
     }
     .header__title {
@@ -253,8 +297,11 @@ p {
 }
 
 @media (max-width: 576px) {
+    .logo__img {
+        width: 140px;
+    }
     .header__title {
-        font-size: var(--h3-font-size);
+        font-size: var(--h4-font-size);
     }
 }
 
