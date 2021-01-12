@@ -124,6 +124,10 @@ a {
     border-bottom-style: solid;
 }
 
+.section__title>span {
+    color: #808080;
+}
+
 .section__text p {
     margin-top: var(--small-font-size);
 }
