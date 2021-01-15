@@ -28,3 +28,17 @@
     });
 })();
 /*===== END SHOW SCROLL TOP =====*/
+/*===== Section Accordion =====*/
+this.addEventListener("DOMContentLoaded", () => {
+    const accordionHeaders = document.querySelectorAll(".section-accordion__head");
+    accordionHeaders.forEach((accordionHead) => accordionHead.addEventListener("click", () => {
+
+        if (accordionHead.parentNode.classList.contains("active")) {
+            accordionHead.parentNode.classList.toggle("active");
+        } else {
+            accordionHeaders.forEach(accordionHead => accordionHead.parentNode.classList.remove("active"));
+            accordionHead.parentNode.classList.add("active");
+        }
+    }));
+});
+/*===== END Section Accordion =====*/

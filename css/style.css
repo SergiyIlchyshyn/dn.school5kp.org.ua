@@ -11,7 +11,7 @@ font-family: 'Montserrat', sans-serif; */
  :root {
     /*===== Font and typography =====*/
     --body-font: 'Ubuntu', sans-serif;
-    --title-font: cursive;
+    --title-font: 'Lobster', sans-serif;
     /* 56px */
     --biggest-font-size: 3.5rem;
     /* 40px */
@@ -113,8 +113,7 @@ a {
 /* section */
 
 .section {
-    padding-top: var(--h2-font-size);
-    padding-bottom: var(--h2-font-size);
+    padding: var(--h2-font-size);
 }
 
 .section__title {
@@ -158,8 +157,63 @@ a {
     margin-bottom: var(--mb-3);
 }
 
+.section small {
+    display: block;
+    text-align: center;
+}
+
 
 /* section end */
+
+
+/*===== Section Accordion =====*/
+
+.section-accordion {
+    border-bottom: 1px solid #e8e8ea
+}
+
+.section-accordion__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.4s;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 25px;
+}
+
+.section-accordion__head>img {
+    align-self: center;
+    transition: all 0.4s ease-in;
+}
+
+.section-accordion__title {
+    font-weight: var(--font-regular);
+}
+
+.section-accordion>.section-accordion__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+
+.active>.section-accordion__panel {
+    max-height: 100%;
+    /* transition: max-height 1s ease-out; */
+}
+
+.active h3 {
+    font-weight: var(--font-bold);
+    color: hsl(14, 88%, 65%);
+}
+
+.active .section-accordion__head>img {
+    transform: rotate(180deg);
+}
+
+
+/*===== Section Accordion End =====*/
 
 
 /*===== SCROLL TOP =====*/
@@ -330,24 +384,11 @@ a {
 /*===== END HEADER =====*/
 
 
-/*===== Instruction  =====*/
-
-.instruction small {
-    display: block;
-    text-align: center;
-}
-
-
-/*===== END Instruction =====*/
-
-
 /*===== FOOTER =====*/
 
 .footer {
     border-top: 1px solid rgba(0, 0, 0, 0.125);
-    padding-top: var(--h3-font-size);
-    padding-bottom: var(--h3-font-size);
-    margin-top: var(--mb-6);
+    padding: var(--mb-6) var(--mb-3);
 }
 
 
