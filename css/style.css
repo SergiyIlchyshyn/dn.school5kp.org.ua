@@ -11,15 +11,23 @@ font-family: 'Montserrat', sans-serif; */
  :root {
     /*===== Font and typography =====*/
     --body-font: 'Ubuntu', sans-serif;
-    --title-font: 'Lobster', cursive;
+    --title-font: cursive;
+    /* 56px */
     --biggest-font-size: 3.5rem;
+    /* 40px */
     --h1-font-size: 2.5rem;
+    /* 24px */
     --h2-font-size: 1.5rem;
+    /* 20px */
     --h3-font-size: 1.25rem;
+    /* 18px */
     --h4-font-size: 1.125rem;
+    /* 16px */
     --normal-font-size: 1rem;
+    /* 14px */
     --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    /* 12px */
+    --smaller-font-size: .75rem;
     /*===== Colors =====*/
     --text-color: #1f1f1f;
     --red: #ff0000;
@@ -30,11 +38,17 @@ font-family: 'Montserrat', sans-serif; */
     --font-medium: 500;
     --font-bold: 700;
     /*===== Margenes =====*/
+    /* 8px */
     --mb-1: .5rem;
+    /* 16px */
     --mb-2: 1rem;
+    /* 24px */
     --mb-3: 1.5rem;
+    /* 32px */
     --mb-4: 2rem;
+    /* 40px */
     --mb-5: 2.5rem;
+    /* 48px */
     --mb-6: 3rem;
 }
 
@@ -59,6 +73,7 @@ body {
     font-weight: var(--font-regular);
     color: var(--text-color);
     line-height: 1.375;
+    background-color: #F0F0F0;
 }
 
 img {
@@ -88,6 +103,7 @@ a {
     max-width: 1200px;
     width: calc(100% - 2rem);
     margin: 0 auto;
+    background-color: #fff;
 }
 
 
@@ -188,27 +204,23 @@ a {
 
 .header {
     width: 100%;
-    padding: 9px 0;
     z-index: 5;
     overflow: hidden;
 }
 
 .header__container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.header__start {
-    margin-right: var(--mb-3);
+    padding: var(--mb-3);
 }
 
 
 /* logo start */
 
 .logo__img {
-    width: 400px;
-    /* height: 19px; */
+    width: 300px;
 }
 
 
@@ -224,6 +236,11 @@ a {
     margin-bottom: var(--mb-2);
     font-family: var(--title-font);
     font-size: var(--h2-font-size);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: var(--font-bold);
+    line-height: 1.5;
 }
 
 .header__menu {
@@ -287,25 +304,25 @@ a {
 
 @media (max-width: 992px) {
     .header__container {
-        flex-direction: column;
-    }
-    .header__start {
-        margin-right: 0;
+        padding: var(--mb-1);
     }
     .logo__img {
         width: 200px;
     }
     .header__title {
-        text-align: center;
+        font-size: var(--h3-font-size);
     }
 }
 
 @media (max-width: 576px) {
-    .logo__img {
-        width: 140px;
-    }
     .header__title {
-        font-size: var(--h4-font-size);
+        font-size: var(--normal-font-size)
+    }
+}
+
+@media (max-width: 380px) {
+    .header__title {
+        font-size: var(--small-font-size);
     }
 }
 
