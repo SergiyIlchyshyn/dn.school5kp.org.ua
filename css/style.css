@@ -11,7 +11,7 @@ font-family: 'Montserrat', sans-serif; */
  :root {
     /*===== Font and typography =====*/
     --body-font: 'Ubuntu', sans-serif;
-    --title-font: 'Lobster', sans-serif;
+    --title-font: 'Lobster', cursive;
     /* 56px */
     --biggest-font-size: 3.5rem;
     /* 40px */
@@ -89,8 +89,26 @@ a {
     text-decoration: none;
 }
 
+a.links {
+    color: #db4454;
+    transition: .3s ease;
+    padding: 0 6px;
+    margin: 0 -4px;
+    position: relative;
+    z-index: 1;
+}
+
+a.links:hover {
+    background: #db4454;
+    color: #fff;
+}
+
 .danger {
     color: var(--red);
+}
+
+main {
+    padding-bottom: var(--mb-5);
 }
 
 
@@ -169,18 +187,29 @@ a {
 /*===== Section Accordion =====*/
 
 .section-accordion {
-    border-bottom: 1px solid #e8e8ea
+    padding: 0;
+    margin: var(--mb-3);
+    /* border-bottom: 1px solid #e8e8ea; */
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.section-accordion:last-child {
+    margin-bottom: 0;
 }
 
 .section-accordion__head {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     transition: all 0.4s;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 25px;
+    font-weight: var(--font-bold);
+    position: relative;
+    /* border: 1px solid;
+    border-radius: 25px; */
 }
 
 .section-accordion__head>img {
@@ -188,14 +217,33 @@ a {
     transition: all 0.4s ease-in;
 }
 
-.section-accordion__title {
-    font-weight: var(--font-regular);
+.section-accordion__head::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
 }
+
+.active>.section-accordion__head::after {
+    content: "\2212";
+}
+
+
+/* .section-accordion__title {
+    font-weight: var(--font-regular);
+} */
 
 .section-accordion>.section-accordion__panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s ease-out;
+    transition: max-height 0.5s ease-out;
+}
+
+.section-accordion__panel>.section__text,
+.section-accordion__panel>.section__img {
+    padding: 1rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
 
 .active>.section-accordion__panel {
@@ -204,7 +252,7 @@ a {
 }
 
 .active h3 {
-    font-weight: var(--font-bold);
+    /* font-weight: var(--font-bold); */
     color: hsl(14, 88%, 65%);
 }
 
@@ -387,8 +435,10 @@ a {
 /*===== FOOTER =====*/
 
 .footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    /* border-top: 1px solid rgba(0, 0, 0, 0.125); */
     padding: var(--mb-6) var(--mb-3);
+    background-color: var(--bg-color);
+    color: #fff;
 }
 
 
