@@ -409,10 +409,13 @@ main {
 /*===== FOOTER =====*/
 
 .footer {
-    /* border-top: 1px solid rgba(0, 0, 0, 0.125); */
     padding: var(--mb-6) var(--mb-3);
     background-color: var(--bg-color);
     color: #fff;
+}
+
+.footer__copy {
+    text-align: center;
 }
 
 
