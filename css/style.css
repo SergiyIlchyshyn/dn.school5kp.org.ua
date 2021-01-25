@@ -83,6 +83,7 @@ p {
 
 a {
     text-decoration: none;
+    transition: background 0.3s linear, color 0.3s linear;
 }
 
 a.links {
@@ -94,7 +95,8 @@ a.links {
     z-index: 1;
 }
 
-a.links:hover {
+a.links:hover,
+a.documents__link:hover {
     background-color: #db4454;
     color: #fff;
 }
@@ -420,3 +422,17 @@ main {
 
 
 /*===== END FOOTER =====*/
+
+
+/*===== Documents Page =====*/
+
+.documents__link {
+    display: inline-block;
+    margin-bottom: var(--mb-2);
+    color: var(--text-color);
+}
+
+.documents__link:hover {}
+
+
+/*===== END Documents Page =====*/
