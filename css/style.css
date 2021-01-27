@@ -59,11 +59,15 @@
 }
 
 html {
+    height: 100%;
     scroll-behavior: smooth;
     font-size: 16px;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--font-regular);
@@ -106,6 +110,7 @@ a.documents__link:hover {
 }
 
 main {
+    flex: 1 0 auto;
     padding-top: var(--mb-5);
     padding-bottom: var(--mb-5);
 }
@@ -280,6 +285,7 @@ main {
 /*===== HEADER =====*/
 
 .header {
+    flex: 0 0 auto;
     width: 100%;
     z-index: 5;
     overflow: hidden;
@@ -411,6 +417,7 @@ main {
 /*===== FOOTER =====*/
 
 .footer {
+    flex: 0 0 auto;
     padding: var(--mb-6) var(--mb-3);
     background-color: var(--bg-color);
     color: #fff;
